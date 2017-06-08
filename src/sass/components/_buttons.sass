@@ -1,0 +1,38 @@
+// buttons
+.btn
+    border: none
+    box-shadow: none
+    border-radius: none
+    font-size: 1.4rem
+    font-family: $primary-font
+    padding: 0.8em 1.2em
+    cursor: pointer
+    text-transform: uppercase
+    font-weight: 600
+    -webkit-appearance: inherit
+    +transition(all 0.3s ease-in-out)
+    &_site
+        background-color: $silver
+        color: gray
+        +press
+            background-color: $gray
+            color: white
+        span.icon
+            &:after
+                content: "+"
+                margin-right: 12px
+        &--gray
+            background-color: silver
+            color: $white
+        &--green
+            background-color: $mediumspringgreen
+            color: $white
+        &--gold
+            background-color: $gold
+            color: $white
+        &--orange
+            background-color: $darkorange
+            color: $white
+        &--red
+            background-color: $indianred
+            color: $white
