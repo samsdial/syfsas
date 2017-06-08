@@ -1,33 +1,21 @@
 extends ./base/layout.pug
 
 block content
-    main#app.container
-        .Grid.Grid--full
-            .Grid-cell
-                .content
-                    section
-                        .title.mg_bottom--x10
-                            h3 Listado de tareas
-                        form.form_one(@submit.prevent="agregarTarea(nuevaTarea)")
-                            .input-group
-                                input.form-control(v-model="nuevaTarea", required)
-                                span
-                                    button.btn.btn_site
-                                        span.cl--white.icon
-                                        span.cl--white Añadir
-                .content
-                    article.list_group.mg_bottom--x10(v-for="tarea in tareas")
-                            .title.mg_bottom--x10
-                                h3(v-bind:class="{txt_completed: tarea.completado}") {{ tarea.titulo }}
-                                .form_one
-                                    input(type="text", v-model="tarea.titulo", v-show="editandoTarea === $index", @blur="editandoTarea = null, editarTarea(tarea)" )
-                            .list_action
-                                span
-                                    button.btn.btn_site--green(@click="editandoTarea = $index") Editar
-                                    button.btn.btn_site--gold(v-show="editandoTarea === $index", @click="editandoTarea = null, editarTarea(tarea)") Guardar
-                                    button.btn.btn_site--orange(@click="tarea.completado = true") Completar
-                                    button.btn.btn_site--gold(@click="tarea.completado = false") Retomar
-                                    button.btn.btn_site--red(@click="eliminarTarea($index)") Eliminar
-
-                pre {{ $data | json }}
-
+    main#carrusel
+        section.slider
+            .slider--img(style="background-image: url(images/banner/01.jpg)")
+                .info
+                    .title.cl--.txt_shadow.txt_site--em3
+                        h2  Lorem ipsum dolor sit amet
+                    .subtitle.cl--.txt_shadow
+                        h4  Lorem ipsum dolor sit amet
+    main#content
+        section#about
+            .container
+                .three-equal-columns
+                    .col
+                        p lorem
+                    .col
+                        p lorem
+                    .col
+                        p lorem

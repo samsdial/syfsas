@@ -1,10 +1,18 @@
-.container
-    header.Grid.Grid--full
-        .Grid-cell
-            ul.navigation
-                li
-                    a(href="#") Home
-                li
-                    a(href="#") About
-                li
-                    a(href="#") Products
+//-- .navbar-fixed-top
+nav#navbar.navbar.navbar-border-bottom
+    .container
+        .nav-header
+            buttom.navbar-toggle
+                span.sr-only
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand
+                h1 Syf
+                span.logo.logo_syf.logo_syf--max
+            .collapse.navbar-collapse.text-center.navbar-ex1-collapse
+                .navbar-main
+                    ul.nav.navbar-nav.navbar-right
+                        - for (var x = 0; x < 5; x++)
+                            li
+                                a(href="#") Item A
