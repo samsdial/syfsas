@@ -13,7 +13,8 @@ html(lang="es")
         meta(name="robots", content="index, follow")
         meta(name="author", content="Lequar")
         block vars
-            - var title="Sitio";
+            - var title="S&F Auditores";
+            - var subtitle="Su mejor aliado";
             - var description="Descricion";
             - var abstract='item, '
             - var keywords=''
@@ -22,7 +23,7 @@ html(lang="es")
             - var canonical=''
             - var shortlink=''
         block seo
-            title Site Lq Vue - #{title}
+            title #{title} - #{subtitle}
             meta(name="description", content=description)
             meta(name="abstract", content=abstract)
             meta(name="keywords", content=keywords)
@@ -60,6 +61,6 @@ html(lang="es")
         block content
         include ./_includes/_footer.pug
         block bottom-script
-            //- script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
             script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js')
             script(src='js/main.js')

@@ -1,0 +1,50 @@
+.slider
+    height: 60vh
+    position: relative
+    width: 100%
+    overflow: hidden
+    background-color: black
+    &--img
+        height: 66vh
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        +image-rendering(pixelated)
+        .info
+            position: absolute
+            bottom: 27%
+            left: 50%
+            right: auto
+            +transform(translateX(-50%))
+            vertical-align: middle
+            text-align: center
+
+.slick
+    &-prev,
+    &-next
+        top: inherit
+        bottom: 16px
+        width: auto
+        height: auto
+        z-index: 99
+    &-prev
+        left: 49%
+    &-next
+        left: 47%
+    &-prev:before,
+    &-next:before
+        line-height: 1
+        color: white
+        opacity: .75
+        font-family: 'icomoon' !important
+        speak: none
+        font-weight: normal
+        font-variant: normal
+        text-transform: normal
+        font-size: 45px
+    &-prev
+        &:before
+            content: ">"
+    &-next
+        &:before
+            content: "<"

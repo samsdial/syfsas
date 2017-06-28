@@ -7,6 +7,7 @@
   &:after
     clear: both
 
+$gutter: 15px
 
 $screen-xs:                  480px !default
 
@@ -160,15 +161,13 @@ $container-lg:                 $container-large-desktop !default
 [class*="col-"], .col
   padding-top: 15px
   padding-bottom: 15px
-  background-color: #eee
-  background-color: rgba(86,61,124,.15)
-  border: 1px solid #ddd
-  border: 1px solid rgba(86,61,124,.2)
+  border: 1px solid silver
 
 // Examples.
 
 // Create rows
 .three-equal-columns,
+.two-equal-columns,
 .three-unequal-columns,
 .two-columns,
 .two-columns-with-two-nested-columns,
@@ -179,9 +178,11 @@ $container-lg:                 $container-large-desktop !default
 
 
 .three-equal-columns
-
   .col
     +make-md-column(4)
+.two-equal-columns
+  .col
+    +make-md-column(6)
 
 .three-unequal-columns
   .col-3
