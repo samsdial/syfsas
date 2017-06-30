@@ -1,1 +1,98 @@
 // header
+.header
+    &-main
+        position: relative
+        left: 0
+        top: 0
+        z-index: 999
+        width: 100%
+        +transition($trs-site)
+        .info_box
+            position: relative
+            float: left
+            min-height: 35px
+            margin-left: 35px
+            font-size: 13px
+            color: gray
+            text-transform: uppercase
+            padding: 0px 0px 20px 52px
+            .icon_box
+                position: absolute
+                left: 0px
+                top: 2px
+                color: steelblue
+                font-size: 40px
+                text-align: left
+                line-height: 1em
+                border-radius: 50%
+                +transition($trs-site)
+            li
+                position: relative
+                line-height: 20px
+                color: silver
+                font-size: 16px
+                margin-bottom: 6px
+                font-weight: 400
+                text-transform: capitalize
+                b
+                    font-weight: 700
+                    color: blue
+                    font-size: 20px
+    &-upper
+        position: relative
+        z-index: 5
+        background-color: $white
+        +transition($trs-site)
+        .upper_right
+            position: relative
+            padding-top: 44px
+    &-lower
+        position: relative
+        top: 0px
+        width: 100%
+        z-index: 5
+.nav
+    &-outer
+        position: relative
+        padding-left: 10px
+        padding-right: 210px
+        margin-bottom: -35px
+        background-color: blue
+
+.main-menu
+    position: relative
+    .navigation
+        position: relative
+        margin: 0px
+        > li
+            position: relative
+            float: left
+            border-right: 1px solid rgba($white, .5)
+            > a
+                position: relative
+                display: block
+                font-size: 18px
+                color: $white
+                line-height: 30px
+                font-weight: 400
+                opacity: 1
+                text-transform: capitalize
+                padding: 20px 20px
+                text-decoration: none
+                +transition($trs-site)
+                +press
+                    color: steelblue
+                    opacity: 1
+            &.dropdown > a
+                padding-right: 40px
+                &:before
+                    font-family: 'iconmoon'
+                    content: "\f107"
+                    position: absolute
+                    right: 20px
+                    font-size: 16px
+                    line-height: 32px
+            &.current > a
+                color: steelblue
+                opacity: 1
+

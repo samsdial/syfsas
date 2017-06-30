@@ -2,7 +2,7 @@
 .btn
     border: none
     box-shadow: none
-    border-radius: none
+    border-radius: inherit
     font-size: 1.4rem
     font-family: $primary-font
     padding: 0.8em 1.2em
@@ -11,6 +11,26 @@
     font-weight: 600
     -webkit-appearance: inherit
     +transition(all 0.3s ease-in-out)
+    &_ghost
+        +btnGhost
+    &-box
+        position: absolute
+        right: 0px
+        top: 0px
+        z-index: 12
+    &_quote
+        position: relative
+        line-height: 24px
+        color: $white
+        font-size: 15px
+        font-weight: 700
+        padding: 21px 52px
+        background-color: steelblue
+        text-transform: uppercase
+        border: 2px solid transparent
+        +press
+            background-color: darkturquoise
+            color: $white
     &_site
         background-color: $silver
         color: gray

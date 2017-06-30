@@ -1,18 +1,52 @@
 //-- .navbar-fixed-top
-nav#navbar.navbar.navbar-border-bottom
-    .container
-        .nav-header
-            buttom.navbar-toggle
-                span.sr-only
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand
-                h1 Syf
-                span.logo.logo_syf.logo_syf--max
-            .collapse.navbar-collapse.text-center.navbar-ex1-collapse
-                .navbar-main
-                    ul.nav.navbar-nav.navbar-right
-                        - for (var x = 0; x < 5; x++)
+header.header-main
+    .header-upper
+        .auto-container
+            .clearfix
+                .pull-left.logo_box
+                    .logo.logo-syf
+                    a.btn_ghost(href="#")
+                .pull-right.upper_right.clearfix
+                    .upper-column.info_box
+                        .icon_box
+                            span.flaticon
+                        ul
                             li
-                                a(href="#") Item A
+                                b Bogotá D.C
+                            li  Carrera 2A Nº 18 - 34 Sur
+                    .upper-column.info_box
+                        .icon_box
+                            span.flaticon
+                        ul
+                            li
+                                b Celular
+                            li  (+57) 321 267 92 83
+                    .upper-column.info_box
+                        .icon_box
+                            span.flaticon
+                        ul
+                            li
+                                b Teléfono
+                            li  Carrera 2A Nº 18 - 34 Sur
+    .header-lower
+        .bg-box
+        .auto-container
+            .nav-outer.clearfix
+                .main-menu
+                    .navbar-header
+                        button.navbar-toggle(type="button", data-toggle="collapse")
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                    .navbar-collapse.collapse.clearfix
+                        ul.navigation.clearfix
+                            li.current.dropdown
+                                a(href="#") Inicio
+                            li.dropdown
+                                a(href="#") Acerca de
+                            li.dropdown
+                                a(href="#") Servicios
+                            li.dropdown
+                                a(href="#") Contacto
+                .btn-box
+                    a.btn.btn_quote(href="#") Cotize Ahora!
