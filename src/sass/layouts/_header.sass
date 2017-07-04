@@ -20,7 +20,7 @@
                 position: absolute
                 left: 0px
                 top: 2px
-                color: steelblue
+                // color: $steelblue
                 font-size: 40px
                 text-align: left
                 line-height: 1em
@@ -36,7 +36,7 @@
                 text-transform: capitalize
                 b
                     font-weight: 700
-                    color: blue
+                    color: $steelblue
                     font-size: 20px
     &-upper
         position: relative
@@ -57,7 +57,7 @@
         padding-left: 10px
         padding-right: 210px
         margin-bottom: -35px
-        background-color: blue
+        background-color: $cadetblue
 
 .main-menu
     position: relative
@@ -81,18 +81,18 @@
                 text-decoration: none
                 +transition($trs-site)
                 +press
-                    color: steelblue
+                    color: $darkturquoise
                     opacity: 1
             &.dropdown > a
                 padding-right: 40px
                 &:before
-                    font-family: 'iconmoon'
+                    font-family: 'icomoon' !important
                     content: "\f107"
                     position: absolute
                     right: 20px
                     font-size: 16px
                     line-height: 32px
             &.current > a
-                color: steelblue
+                color: $darkturquoise
                 opacity: 1
 
