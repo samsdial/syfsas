@@ -23,28 +23,38 @@
     &-prev,
     &-next
         top: inherit
-        bottom: 16px
+        top: 50%
         width: auto
         height: auto
         z-index: 99
+        border-radius: 50%
+        border: 1px solid $white
+        background-color: rgba($white, .5)
+        padding: 15px
+        +transition($trs-site)
     &-prev
-        left: 49%
+        left: 5%
+        +press
+            background-color: rgba($white, .9)
+        &:before:hover,
+        &:before:focus
+            color: $darkturquoise !important
     &-next
-        left: 47%
+        right: 5%
     &-prev:before,
     &-next:before
         line-height: 1
-        color: white
+        color: $darkturquoise
         opacity: .75
         font-family: 'icomoon' !important
         speak: none
         font-weight: normal
         font-variant: normal
         text-transform: normal
-        font-size: 45px
+        font-size: 25px
     &-prev
         &:before
-            content: ">"
+            content: "\f177"
     &-next
         &:before
-            content: "<"
+            content: "\f178"

@@ -16,9 +16,21 @@
         text-transform: capitalize
     &_right
         text-align: right
+    &_shadow
+        text-shadow: 0px 2px 2px ($black)
     &_size
-        &--x
-            // number
+        &--em3
+            +heading
+                +font-size(3)
+        &--em4
+            +heading
+                +font-size(4)
+        &--em5
+            +heading
+                +font-size(5)
+        &--em6
+            +heading
+                +font-size(6)
     &_completed
         text-decoration: line-through
         font-style: italic
