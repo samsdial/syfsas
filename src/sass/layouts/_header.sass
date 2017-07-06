@@ -45,12 +45,23 @@
         +transition($trs-site)
         .upper_right
             position: relative
-            padding-top: 44px
+            padding: 0 0
+            width: 100%
+            text-align: center
+            // +MQ(S)
+            // +MQ(M)
+            +MQ(M)
+                width: inherit
+                padding-top: 44px
+                text-align: left
     &-lower
         position: relative
         top: 0px
         width: 100%
         z-index: 5
+        .bg-box
+            +MQMAX(L)
+                display: none
 .nav
     &-outer
         position: relative
@@ -58,9 +69,28 @@
         padding-right: 210px
         margin-bottom: -35px
         background-color: $cadetblue
+        +MQMAX(M)
+            margin: 0px 0px 15px
+            padding-left: 15px
+            padding-right: 15px
 
 .main-menu
     position: relative
+    +MQMAX(S)
+        padding-top: 0px
+        width: 100%
+        margin: 0px
+        padding-left: 0px
+    .navbar-header
+        @media only screen and (max-width: 767px)
+            position: relative
+            float: none
+            display: inline-block
+            text-align: right
+            width: 100%
+            padding: 13px 0px 14px
+            right: 0px
+            z-index: 12
     .navigation
         position: relative
         margin: 0px
@@ -95,4 +125,49 @@
             &.current > a
                 color: $darkturquoise
                 opacity: 1
-
+    .collapsing,
+    .collapse
+        padding: 0px
+        +MQMAX(S)
+            max-height: 300px
+            overflow: auto
+            float: none
+            width: 100%
+            padding: 10px 0px 0px
+            border: none
+            margin: 0px
+            border-radius: 3px
+        &.in
+            +MQMAX(S)
+                padding: 0px 0px 0px
+                border: none
+                margin: 0px 0px 15px
+                border-radius: 3px
+        & > .navigation
+            +MQMAX(S)
+                float: none !important
+                margin: 0px !important
+                width: 100% !important
+                // background-color: $darkturquoise
+            & > li
+                +MQMAX(S)
+                    opacity: 1
+                    top: 0px
+                    left: 0px
+                    visibility: visible
+                    margin: 0px
+                    float: none
+                    width: 100%
+                    border-right: none
+    .navbar-toggle
+        +MQMAX(S)
+            display: inline-block
+            z-index: 7
+            top: 1px
+            boder: 1px solid $darkturquoise
+            float: none
+            margin: 0px
+            border-radius: 0px
+            background-color: $darkturquoise
+        .icon-bar
+            background: $white

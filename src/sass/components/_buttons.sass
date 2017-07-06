@@ -14,23 +14,34 @@
     &_ghost
         +btnGhost
     &-box
+        display: block
         position: absolute
-        right: 0px
+        left: 12px
+        right: auto
         top: 0px
         z-index: 12
+        margin-top: 0px
+        +MQ(M)
+            right: 0px
+            left: inherit
+            margin-top: inherit
     &_quote
         position: relative
         line-height: 24px
         color: $white
         font-size: 15px
         font-weight: 700
-        padding: 21px 52px
+        padding: 8px 52px
         background-color: $steelblue
         text-transform: uppercase
         border: 2px solid transparent
+        top: 8px
         +press
             background-color: $darkturquoise
             color: $white
+        +MQ(M)
+            top: inherit
+            padding: 21px 52px
     &_site
         background-color: $silver
         color: gray

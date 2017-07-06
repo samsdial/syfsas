@@ -24,7 +24,7 @@
     &-next
         top: inherit
         top: 50%
-        width: auto
+        width: 55px
         height: auto
         z-index: 99
         border-radius: 50%
@@ -32,6 +32,9 @@
         background-color: rgba($white, .5)
         padding: 15px
         +transition($trs-site)
+        +MQMAX(S)
+            top: inherit
+            bottom: 10px
     &-prev
         left: 5%
         +press
@@ -39,8 +42,14 @@
         &:before:hover,
         &:before:focus
             color: $darkturquoise !important
+        +MQMAX(S)
+            left: 20%
     &-next
         right: 5%
+        +press
+            background-color: rgba($white, .9)
+        +MQMAX(S)
+            right: 20%
     &-prev:before,
     &-next:before
         line-height: 1
@@ -54,7 +63,7 @@
         font-size: 25px
     &-prev
         &:before
-            content: "\f177"
+            content: "\f104"
     &-next
         &:before
-            content: "\f178"
+            content: "\f105"

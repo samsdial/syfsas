@@ -13,6 +13,16 @@
     @else if $canvas == L
         @media only screen and (min-width: $L) { @content; }
 
+=MQMAX($canvas)
+    @if $canvas == S
+        @media only screen and (max-width: $S) { @content; }
+
+    @else if $canvas == M
+        @media only screen and (max-width: $M) { @content; }
+
+    @else if $canvas == L
+        @media only screen and (max-width: $L) { @content; }
+
 //Boton fantasma
 =column($percentage, $float-direction:left)
     width: 100% * $percentage
@@ -37,6 +47,9 @@
     @content
 
 // Heading site
+=header
+    h1, h2, h3, h4, h5, h6
+
 =heading
     h2, h3, h4, h5, h6, p, b, small
         @content
