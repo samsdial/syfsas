@@ -1,0 +1,81 @@
+.accordion
+    &_box
+        position: relative
+        padding-top: 20px
+        border: 1px solid $silver
+        .block
+            position: relative
+            padding-bottom: 22px
+            margin-bottom: 22px
+            padding-left: 20px
+            padding-right: 30px
+            border-bottom: 1px solid $silver
+            &:last-child
+                margin-bottom: 0px
+                border: 0px
+            .icon
+                position: absolute
+                left: -1px
+                top: 50%
+                margin-top: -15px
+                width: 100%
+                width: 29px
+                height: 29px
+                text-align: center
+                border-radius: 50%
+                line-height: 30px
+                font-size: 40px
+                color: $silver
+            .icon_outer
+                position: absolute
+                left: 0px
+                top: 0px
+                width: 30px
+                height: 30px
+                text-align: center
+                border-radius: 50%
+                text-align: center
+                font-size: 16px
+                color: $gainsboro
+                +transition($trs-site)
+                .icon-angle-up
+                    opacity: 1
+                .icon-angle-down
+                    opacity: 0
+                    color: $steelblue
+            .btn_acc
+                position: relative
+                font-size: 20px
+                cursor: pointer
+                line-height: 30px
+                padding: 0px 0px 0px 50px
+                +transition($trs-site)
+                +header
+                    color: $cadetblue
+                    font-weight: 700
+                .title
+                    color: $steelblue
+                &.active
+                    .icon_outer
+                        .icon-angle-up
+                            opacity: 0
+                        .icon-angle-down
+                            opacity: 1
+.accordion
+    &_box
+        .block
+            .content_acc
+                position: relative
+                display: none
+                padding-left: 52px
+            .content
+                position: relative
+                font-size: 14px
+                padding: 16px 0px 0px 0px
+                p:last-child
+                    margin-bottom: 0px
+                p
+                    margin-bottom: 20px
+                    line-height: 1.6em
+                    font-size: 16px
+                    color: rgba($black, .40)
