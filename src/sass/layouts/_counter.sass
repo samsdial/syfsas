@@ -1,0 +1,57 @@
+/* mostrador de datos de la empresa. */
+.counter
+    &_seccion
+        margin-bottom: 50px
+        .title.data
+            position: relative
+            +heading
+                position: relative
+                +font-size(5)
+                font-weight: 700
+                line-height: 1.3em
+                text-align: right
+    &_column
+        position: relative
+        .column--inner
+            position: relative
+            padding-left: 40px
+            +MQMAX(M)
+                padding-left: 0px
+        .message
+            position: relative
+            +heading
+                font-size: 20px
+                font-weight: 300
+                span
+                    font-weight: 600
+                a
+                    font-weight: 600
+                    color: $white
+                    +font-size(2)
+                    +press
+                        color: $darkturquoise
+    &_fact
+        position: relative
+        .column
+            position: relative
+            margin-bottom: 40px
+            .inner
+                position: relative
+            .title
+                margin-top: 5px
+                text-transform: capitalize
+                +heading
+                    font-weight: 300
+        .counter--outer
+            .counter--text,
+            .plus--tag
+                color: $darkturquoise
+                font-weight: 700
+                position: relative
+                line-height: 1em
+            .counter--text
+                +font-size(4)
+            .plus--tag
+                +font-size(4.5)
+                display: inline-block
+                margin-left: 5px
