@@ -18,15 +18,6 @@ block content
                     .subtitle.cl--white.txt_shadow.txt_size--em3
                         h4  A nuestros clientes
     main
-        section#about.hidden
-            .auto-container
-                .three-equal-columns
-                    .col
-                        p lorem
-                    .col
-                        p lorem
-                    .col
-                        p lorem
         section#about
             .auto-container
                 .two-equal-columns
@@ -110,21 +101,69 @@ block content
                     h3
                         b Servicios
                 .subtitle.txt_center.mg_bottom--x20
-                    h4 Ofrecemos todo tipo de negocios, finanzas y servicios de consultoría.
+                    h4 Consolidarnos como una sociedad <br> dedicada a la prestación de servicios de asesoría contable,<br> tributaria, económica, jurídica y financiera,<br> con amplio conocimiento en auditoría y revisoría fiscal.
             .auto-container
-                .three-equal-columns
+                .two-equal-columns
                     .col.services_list.mg_bottom--x20
                         .inner_box
-                            .services_number 01
+                            .services_number.cl--silver 01
                             .icon_box
                                 span.icon
-                        h3.cl--steelblue.mg_bottom--x10 Lorem ipsum dolor sit amet.
+                        //- h3.cl--steelblue.mg_bottom--x10 Asesoría Contable
+                        .title.title_site.cl--steelblue.mg_bottom--x20
+                            h3
+                                b Asesoría Contable
                         .paragraf.mg_bottom--x10
-                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius expedita sequi praesentium tempore sint et est, facere ex commodi accusantium repellendus aut sunt ratione pariatur, molestiae quae exercitationem, ipsam nobis.
-                        a.detail(href="#")
-                            p.dis_ib Más detalles
-                            span.icon.mg_left--x5.icon-long-arrow-right
-                    .col
-                        p lorem
-                    .col
-                        p lorem
+                            p Es un análisis a través de la Organización e implementación de sistemas contables, teniendo como base las normas de contabilidad y con un manejo integral de la contabilidad, la cual se hará bajo los parámetros de la preparación, elaboración y revisión de Estados Financieros.
+                            br
+                            p Ofrecemos un servicio de asesoría contable, buscando soluciones efectivas que le faciliten a la Gerencia la toma decisiones.
+                            br
+                            p Como asesores, analizamos y evaluamos el manejo de las diferentes operaciones contables y los sistemas de información para diagnosticar el estado en que se encuentra la empresa, haciendo las respectivas recomendaciones, su aplicación, para la obtención de resultados.
+                        //- a.detail(href="#")
+                        //-     p.dis_ib Más detalles
+                        //-     span.icon.mg_left--x5.icon-long-arrow-right
+                    .col.services_list.mg_top--x100
+                        figure.mg_bottom--x20
+                            .img(style="background-image: url(images/banner/02.jpg)")
+                .two-equal-columns
+                    .col.services_list.mg_top--x100
+                        figure.mg_bottom--x20
+                            .img(style="background-image: url(images/banner/02.jpg)")
+                    .col.services_list.mg_bottom--x20
+                        .inner_box
+                            .services_number.cl--silver 02
+                            .icon_box
+                                span.icon
+                        //- h3.cl--steelblue.mg_bottom--x10 Asesoría Contable
+                        .title.title_site.cl--steelblue.mg_bottom--x20
+                            h3
+                                b Asesoría Financiera
+                        .paragraf.mg_bottom--x10
+                            p A través del servicio de asesoría financiera buscamos aumentar el valor de su empresa identificando oportunidades de mejoramiento, maximizando sus fortalezas, para así implementar políticas de creación de valor exitosas y eficaces en su negocio.
+                        //- a.detail(href="#")
+                        //-     p.dis_ib Más detalles
+                        //-     span.icon.mg_left--x5.icon-long-arrow-right
+        section#contact.fullwidth-seccion
+            .section-outer.clearfix
+                .bgi_item.bgi_column(style="background-image: url(images/banner/02.jpg)")
+                .form_column.bgc--steelblue
+                    .content
+                        .title.title_site.cl--white
+                            h3
+                                b Consultanos Ahora.
+                        .contact_form
+                            form#contact
+                                ul.list_contact.list--inline
+                                    li(style="width: 91%;")
+                                        .fullName.error
+                                            //- label *Nombre y Apellidos
+                                            input.contac_input(type="text", placeholder="Nombre y Apellidos")
+                                    li(style="width: 91%;")
+                                        .email.error
+                                            //- label *Correo Electronico
+                                            input.contac_input(type="email", placeholder="Correo Electronico")
+                                    li(style="width: 91%;")
+                                        //- label *Mensaje
+                                        textarea.contac_txtArea(type="text", rows="2", cols="60", placeholder="Mensaje")
+                                .box_submit
+                                    buttom.btn.btn_site Enviar

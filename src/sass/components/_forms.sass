@@ -2,65 +2,136 @@
 
 fieldset
     border: none
-.form_one
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+    border: none;
+    -webkit-text-fill-color: $steelblue;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset;
+    transition: background-color 5000s ease-in-out 0s;
+
+.newslatter
+    position: relative
+    .register.error
+        input.newslatter_input
+            border: 1px solid red
     #{$all-text-inputs}
-        border-top: 2px solid transparent
-        border-left: 0px solid transparent
-        border-right: 0px solid transparent
-        border-bottom: 2px solid blueLight
-        padding: .6em 1em
-        display: inline-block
-        margin-bottom: 12px
-        width: 100%
-        +transition(all 0.3s ease-in-out)
-        +placeholder
-            color: $darkGray
-            font-weight: 700
-        &:focus
-            outline-offset: 0px
+        &.newslatter_input
             outline: none
-            border-bottom: 2px solid blue !important
-
-// Grid #fomulario one
-
-.form_one
-    #{$all-text-inputs}
-        &.min
+            margin-top: 1em
+            padding:  0px 4em 0px 1.9em
+            height: 40px
             width: 100%
-            +MQ(S)
-                width: 32.1%
-            +MQ(M)
-                width: 32.25%
+            background: rgba($white, 1)
+            color: $gray
+            position: relative
+            display: block
+            border: none
+            font-size: 13px
+            border-radius: 20px
+            -webkit-appearance: none
+            +transition(all 0.3s ease-in-out)
+            &:focus
+                + label
+                    &:after
+                        +transform(translate3d(0, 0, 0))
+                    span
+                        animation: anim-1 0.3s forwards
+.contact_form
+    position: relative
+    from
+        width: 100%
     #{$all-text-inputs}
-        &.middle
+        &.contac_input
+            outline: none
+            margin-top: .4em
+            margin-bottom: 1em
+            padding:  0px 4em 0px 0em
+            height: 40px
             width: 100%
-            +MQ(S)
-                width: 48.9%
-            +MQ(M)
-                width: 49.25%
-    #{$all-text-inputs}
-        &.full
-            width: 100%
-//  Estados de formularios
-
-.form_one
-    #{$all-text-inputs}
-        &.succes
+            background: transparent
+            color: $white
+            position: relative
+            display: block
+            border: none
+            font-size: 13px
+            border-radius: none
+            // border: 2px solid $silver
             border-top: 2px solid transparent
-            border-left: 0px solid transparent
-            border-right: 0px solid transparent
-            border-bottom: 2px solid green
-        &.alert
-            border-top: 2px solid transparent
-            border-left: 0px solid transparent
-            border-right: 0px solid transparent
-            border-bottom: 2px solid red
-
-// titulos de fomulario o labels
-.form_one
+            border-bottom: 2px solid $darkturquoise
+            border-left: 2px solid transparent
+            border-right: 2px solid transparent
+            -webkit-appearance: none
+            +transition(all 0.3s ease-in-out)
+            &:focus
+                + label
+                    &:after
+                        +transform(translate3d(0, 0, 0))
+                    span
+                        animation: anim-1 0.3s forwards
+        &.contac_txtArea
+            outline: none
+            margin-top: .4em
+            margin-bottom: 1em
+            padding:  2em 4em 1em 0em
+            width: 100%
+            background: transparent
+            color: $white
+            position: relative
+            display: block
+            border: none
+            font-size: 13px
+            border-radius: none
+            bborder-top: 2px solid transparent
+            border-bottom: 2px solid $darkturquoise
+            border-left: 2px solid transparent
+            border-right: 2px solid transparent
+            -webkit-appearance: none
+            +transition(all 0.3s ease-in-out)
+            &:focus
+                + label
+                    &:after
+                        +transform(translate3d(0, 0, 0))
+                    span
+                        animation: anim-1 0.3s forwards
+.contact_form
     label
+        position: relative
+        width: 100%
         display: block
-        &.radio,
-        &.checkbox
-            display: inline-block
-            padding-left: 9px
+.affair
+    &.error
+        label
+            &:before
+                content: "Escriba el asunto."
+.fullName
+    &.error
+        label
+            &:before
+                content: "Escriba su Nomble completo."
+.email
+    &.error
+        label
+            &:before
+                content: "Escriba su Email."
+.message
+    &.error
+        label
+            &:before
+                content: "Escriba su mensaje para nosotros."
+
+
+.error
+    label
+        &:before
+            font-size: 10px
+            color: red
+            position: absolute
+            right: 0
+.form_column
+    position: relative
+    width: 50%
+    display: inline-block
+    padding: 95px 15px 100px 100px
+    vertical-align: top
