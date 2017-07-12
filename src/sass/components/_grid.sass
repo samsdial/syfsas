@@ -122,6 +122,15 @@ $container-lg:                 $container-large-desktop !default
     float: left
     width: percentage(($columns / $grid-columns))
 
+=make-fm-column($columns, $gutter: $grid-gutter-width)
+  position: relative
+  min-height: 1px
+  // padding-left:  ($gutter / 2)
+  // padding-right: ($gutter / 2)
+  @media (min-width: $screen-md-min)
+    float: right
+    width: percentage(($columns / $grid-columns))
+
 =make-md-column-offset($columns)
   @media (min-width: $screen-md-min)
     margin-left: percentage(($columns / $grid-columns))
@@ -183,6 +192,10 @@ $container-lg:                 $container-large-desktop !default
 .two-equal-columns
   .col
     +make-md-column(6)
+
+.two-form-columns
+  .col
+    +make-fm-column(6)
 
 .three-unequal-columns
   .col-3

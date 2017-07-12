@@ -1,0 +1,33 @@
+.services
+    &_list
+        position: relative
+        .inner_box
+            position: relative
+            padding: 35px 35px
+            border: 1px solid $lightGray
+            .services_number
+                position: absolute
+                right: 40px
+                top: 40px
+                line-height: 1em
+                font-size: 50px
+                font-weight: 300
+                color: rgba($silver, .5)
+            a.detail
+                position: relative
+                color: $silver
+                font-weight: 500
+                text-decoration: none
+                +transition($trs-site)
+                +press
+                    color: $darkturquoise
+                    p
+                        color: $darkturquoise
+                p
+                    color: $silver
+                &.disabled
+                    cursor: no-drop
+                    +press
+                        color: $silver
+                        p
+                            color: $silver

@@ -16,4 +16,16 @@
             z-index: 19
             +MQMAX(S)
                 padding-left: 10px
-                padding-left: 10px
+                padding-right: 10px
+.list
+    &_site
+        li
+            position: relative
+            padding-left: 15px
+            padding-bottom: 5px
+        li:after
+            position: absolute
+            top: 0px
+            left: 0px
+            content: "•"
+            color: $steelblue
